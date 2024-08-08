@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+      <!-- header starts -->
+    <header class="header">
+        <nav>
+            <div class="navbar">
+                <div class="full_logo">
+                <a href="Home.html"><img src="{{ url_for('static', filename='image/logo.jpg') }}" alt="logo" style="height: 70px; width: 50px;" ></a>
+                <span class="nav_logo">  <a href="Home.html">CHD Progress Check</a> </span>
+                </div>
+                <ul class="navLinks">
+                    <li class="link"><a href="{{ url_for('home') }}"><i class="fa-solid fa-home"></i>Home</a></li>
+                    <li class="link"><a href="{{ url_for('about') }}"><i class="fa-solid fa-circle-info"></i>About us</a></li>
+                    <li class="link"><a href="{{ url_for('prediction') }}"><i class="fa-solid fa-list"></i>Prediction</a></li>
+                    <li class="link"><a href="{{ url_for('tips') }}"><i class="fa-solid fa-lightbulb"></i>Tips</a></li>
+                </ul>
+                <button class="button"> <a href="{{ url_for('contact') }}">Contact</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <div class="container" style="margin-top:100px">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="heading">About Us</h1>
+                <p>CHD Prognosis Center is dedicated to providing advanced cardiovascular health assessments to our community. Our mission is to improve heart health by offering accurate predictions and recommendations based on comprehensive data analysis.</p>
+                <div class="row mt-4 image-card">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="{{ url_for('static', filename='/image/about1.jpg') }}" class="card-img-top" alt="About Image 1">
+                            <div class="card-content">
+                                <h2>Our Technology</h2>
+                                <p>We use state-of-the-art technology and machine learning models to provide precise heart disease predictions and recommendations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="{{ url_for('static', filename='/image/about2.jpg') }}"class="card-img-top" alt="About Image 2">
+                            <div class="card-content">
+                                <h2>Our Experts</h2>
+                                <p>Our team consists of skilled data scientists and healthcare professionals dedicated to analyzing data and enhancing cardiovascular health.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Feedback Section -->
+<h1 class="heading">Give Your<span> Feedback</span></h1>
+<div class="feedback-container">
+    <h1>Feedback Form</h1>
+    <form class="feedback-form" action="" method="post">
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="comments">Your Feedback:</label>
+            <textarea id="comments" name="comments" placeholder="Enter your feedback here..." required></textarea>
+        </div>
+        <button type="submit" class="button">Submit</button>
+    </form>
+</div>
+
+    <!-- footer starts -->
+
+    <footer>
+        <div class="main_content">
+          <div class="left box">
+            <h2 class="special">Address</h2>
+            <div class="left c_content">
+              <div class="c email">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="text">register@cuet.ac.bd</span>
+              </div>
+              <br>
+              <div class="c place">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="text">Pahartoli,Raozan-4349<br>Chittagong,Bangladesh</span>
+              </div>
+              <br>
+              <div class="c phone">
+                <i class="fa-solid fa-phone"></i>
+                <span class="text">01733644436</span>
+              </div>
+            </div>
+          </div>
+          <div class="center box">
+            <h2>Quick Links</h2>
+            <ul class="list">
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="right box">
+            <h2>Find us</h2>
+            <p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.1555203893604!2d91.96805217384582!3d22.460789337061858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad2fca4ed2436f%3A0xa3c0d8a00daaa533!2sCUET%20Medical%20Center!5e0!3m2!1sen!2sbd!4v1708798577269!5m2!1sen!2sbd" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p>
+          </div>
+        </div>
+        <div class="bottom-bar">
+          <p>&copy; 2024 CUET. All rights reserved.</p>
+        </div>
+      </footer>
+        <!-- Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    
+    </html>
